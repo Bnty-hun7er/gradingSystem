@@ -1,0 +1,148 @@
+create database students2018;
+create database students2019;
+create database students2020;
+create database students2021;
+create database students2022;
+create database students2023;
+create database students2024;
+
+
+
+
+
+
+
+use students2024;
+
+CREATE TABLE students (
+    id INT NOT NULL AUTO_INCREMENT,
+    index_number VARCHAR(50),
+    PRIMARY KEY (id)
+);
+
+ 
+INSERT INTO students (index_number) VALUES 
+('EUSL/TC/IS/2024/COM/01'),
+('EUSL/TC/IS/2024/COM/02'),
+('EUSL/TC/IS/2024/COM/03'),
+('EUSL/TC/IS/2024/COM/04'),
+('EUSL/TC/IS/2024/COM/05'),
+('EUSL/TC/IS/2024/COM/06'),
+('EUSL/TC/IS/2024/COM/07'),
+('EUSL/TC/IS/2024/COM/08'),
+('EUSL/TC/IS/2024/COM/09'),
+('EUSL/TC/IS/2024/COM/10');
+
+use students2023;
+
+CREATE TABLE students (
+    id INT NOT NULL AUTO_INCREMENT,
+    index_number VARCHAR(50),
+    PRIMARY KEY (id)
+);
+
+ 
+INSERT INTO students (index_number) VALUES 
+('EUSL/TC/IS/2023/COM/01'),
+('EUSL/TC/IS/2023/COM/02'),
+('EUSL/TC/IS/2023/COM/03'),
+('EUSL/TC/IS/2023/COM/04'),
+('EUSL/TC/IS/2023/COM/05'),
+('EUSL/TC/IS/2023/COM/06'),
+('EUSL/TC/IS/2023/COM/07'),
+('EUSL/TC/IS/2023/COM/08'),
+('EUSL/TC/IS/2023/COM/09'),
+('EUSL/TC/IS/2023/COM/10');
+
+
+
+use students2022;
+
+CREATE TABLE students (
+    id INT NOT NULL AUTO_INCREMENT,
+    index_number VARCHAR(50),
+    PRIMARY KEY (id)
+);
+
+ 
+INSERT INTO students (index_number) VALUES 
+('EUSL/TC/IS/2022/COM/01'),
+('EUSL/TC/IS/2022/COM/02'),
+('EUSL/TC/IS/2022/COM/03'),
+('EUSL/TC/IS/2022/COM/04'),
+('EUSL/TC/IS/2022/COM/05'),
+('EUSL/TC/IS/2022/COM/06'),
+('EUSL/TC/IS/2022/COM/07'),
+('EUSL/TC/IS/2022/COM/08'),
+('EUSL/TC/IS/2022/COM/09'),
+('EUSL/TC/IS/2022/COM/10');
+
+
+
+
+
+use students2021;
+
+CREATE TABLE students (
+    id INT NOT NULL AUTO_INCREMENT,
+    index_number VARCHAR(50),
+    PRIMARY KEY (id)
+);
+
+ 
+INSERT INTO students (index_number) VALUES 
+('EUSL/TC/IS/2021/COM/01'),
+('EUSL/TC/IS/2021/COM/02'),
+('EUSL/TC/IS/2021/COM/03'),
+('EUSL/TC/IS/2021/COM/04'),
+('EUSL/TC/IS/2021/COM/05'),
+('EUSL/TC/IS/2021/COM/06'),
+('EUSL/TC/IS/2021/COM/07'),
+('EUSL/TC/IS/2021/COM/08'),
+('EUSL/TC/IS/2021/COM/09'),
+('EUSL/TC/IS/2021/COM/10');
+
+
+
+use students2020;
+
+CREATE TABLE students (
+    id INT NOT NULL AUTO_INCREMENT,
+    index_number VARCHAR(50),
+    PRIMARY KEY (id)
+);
+
+ 
+INSERT INTO students (index_number) VALUES 
+('EUSL/TC/IS/2020/COM/01'),
+('EUSL/TC/IS/2020/COM/02'),
+('EUSL/TC/IS/2020/COM/03'),
+('EUSL/TC/IS/2020/COM/04'),
+('EUSL/TC/IS/2020/COM/05'),
+('EUSL/TC/IS/2020/COM/06'),
+('EUSL/TC/IS/2020/COM/07'),
+('EUSL/TC/IS/2020/COM/08'),
+('EUSL/TC/IS/2020/COM/09'),
+('EUSL/TC/IS/2020/COM/10');
+
+use students2018;
+
+CREATE TABLE students (
+    id INT NOT NULL AUTO_INCREMENT,
+    index_number VARCHAR(50),
+    PRIMARY KEY (id)
+);
+
+ 
+INSERT INTO students (index_number) VALUES 
+('EUSL/TC/IS/2018/COM/01'),
+('EUSL/TC/IS/2018/COM/02'),
+('EUSL/TC/IS/2018/COM/03'),
+('EUSL/TC/IS/2018/COM/04'),
+('EUSL/TC/IS/2018/COM/05'),
+('EUSL/TC/IS/2018/COM/06'),
+('EUSL/TC/IS/2018/COM/07'),
+('EUSL/TC/IS/2018/COM/08'),
+('EUSL/TC/IS/2018/COM/09'),
+('EUSL/TC/IS/2018/COM/10');
+
