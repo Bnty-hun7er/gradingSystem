@@ -110,7 +110,7 @@ function calculateAvg(input, id) {
     let examMarks = parseFloat(document.querySelector(`input[name='exam_marks[${id}]']`).value) || 0;
 
     // Calculate average CA
-    let avgCA = (ca1 + ca2 + ca3) *35/100 ;
+    let avgCA = (ca1 + ca2 + ca3) *35/300 ;
     document.getElementById(`avgCA_${id}`).value = avgCA.toFixed(2);
 
     // Calculate average marks (avgCA + exam marks)
