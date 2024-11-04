@@ -44,6 +44,19 @@ if ($result === false) {
     die("Query failed: " . $conn->error);
 }
 
+// Start HTML output
+echo '<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="page5.css">
+    <title>Grading Results</title>
+</head>
+<body>
+<div class="container">
+    <h1>Grading Results</h1>';
+
 if ($result->num_rows > 0) {
     $columns = [];
     while ($row = $result->fetch_assoc()) {
@@ -60,7 +73,7 @@ if ($result->num_rows > 0) {
 
     if ($dataResult->num_rows > 0) {
         // Start HTML table
-        echo "<table border='1'><tr>";
+        echo "<table><tr>";
 
         // Print column headers
         foreach ($columns as $column) {
@@ -86,4 +99,8 @@ if ($result->num_rows > 0) {
 
 // Close connection
 $conn->close();
+
+echo '</div>
+</body>
+</html>';
 ?>

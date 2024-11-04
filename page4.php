@@ -33,7 +33,14 @@ if ($year === 0 || $accyear === 0 || $sem === 0 || empty($subject)) {
 $dbName = $year . "_Y_" . $accyear . "_S_" . $sem;
 $conn->select_db($dbName);
 
+// Prepare the table name
 $tableName = "Marks_" . $subject;
+
+// Check if the table exists before attempting to update it
+$result = $conn->query("SHOW TABLES LIKE '$tableName'");
+if ($result->num_rows == 0) {
+    die("Table '$tableName' does not exist.");
+}
 
 // Prepare the SQL statement
 $sql = "UPDATE $tableName SET 
@@ -62,20 +69,34 @@ foreach ($_POST['ca1'] as $id => $ca1) {
     $ca3 = isset($_POST['ca3'][$id]) ? (int)$_POST['ca3'][$id] : 0;
     $examMarks = isset($_POST['exam_marks'][$id]) ? (int)$_POST['exam_marks'][$id] : 0;
     
-    $avgCA = ($ca1 + $ca2 + $ca3) *35 / 300;
-    $avgMarks = $avgCA + $examMarks;
+   // Calculate average CA
+$avgCA = (($ca1 + $ca2 + $ca3) / 3) * 0.35;
 
-    // Calculate grade
-    $grade = 'F';
-    if ($avgMarks >= 80) {
-        $grade = 'A';
-    } elseif ($avgMarks >= 70) {
-        $grade = 'B';
-    } elseif ($avgMarks >= 60) {
-        $grade = 'C';
-    } elseif ($avgMarks >= 50) {
-        $grade = 'D';
-    }
+// Calculate total average marks
+$avgMarks = $avgCA + ($examMarks * 0.65);
+
+// Determine the grade based on total average
+$grade = 'F';
+if ($avgMarks >= 75) {
+    $grade = 'A+';
+} else if ($avgMarks >= 70) {
+    $grade = 'A';
+} else if ($avgMarks >= 65) {
+    $grade = 'A-';
+} else if ($avgMarks >= 60) {
+    $grade = 'B+';
+} else if ($avgMarks >= 55) {
+    $grade = 'B';
+} else if ($avgMarks >= 50) {
+    $grade = 'B-';
+} else if ($avgMarks >= 45) {
+    $grade = 'C+';
+} else if ($avgMarks >= 40) {
+    $grade = 'C';
+} else if ($avgMarks >= 35) {
+    $grade = 'C-';
+} 
+
 
     // Execute the prepared statement
     if (!$stmt->execute()) {
@@ -84,7 +105,7 @@ foreach ($_POST['ca1'] as $id => $ca1) {
 }
 
 // Add column to the final_grade table
-$sqlAddColumn = "ALTER TABLE final_grade ADD COLUMN $subject VARCHAR(1)";
+$sqlAddColumn = "ALTER TABLE final_grade ADD COLUMN $subject VARCHAR(2)";
 if (!$conn->query($sqlAddColumn)) {
     die("Error adding column: " . $conn->error);
 }

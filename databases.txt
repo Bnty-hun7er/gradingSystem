@@ -125,6 +125,26 @@ INSERT INTO students (index_number) VALUES
 ('EUSL/TC/IS/2020/COM/09'),
 ('EUSL/TC/IS/2020/COM/10');
 
+use students2019;
+
+CREATE TABLE students (
+    id INT NOT NULL AUTO_INCREMENT,
+    index_number VARCHAR(50),
+    PRIMARY KEY (id)
+);
+
+ 
+INSERT INTO students (index_number) VALUES 
+('EUSL/TC/IS/2019/COM/01'),
+('EUSL/TC/IS/2019/COM/02'),
+('EUSL/TC/IS/2019/COM/03'),
+('EUSL/TC/IS/2019/COM/04'),
+('EUSL/TC/IS/2019/COM/05'),
+('EUSL/TC/IS/2019/COM/06'),
+('EUSL/TC/IS/2019/COM/07'),
+('EUSL/TC/IS/2019/COM/08'),
+('EUSL/TC/IS/2019/COM/09'),
+('EUSL/TC/IS/2019/COM/10');
 use students2018;
 
 CREATE TABLE students (

@@ -97,7 +97,7 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grading</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="page2.css">
 </head>
 <body>
     <div class="header">
